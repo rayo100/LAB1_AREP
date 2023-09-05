@@ -52,13 +52,8 @@ Ubíquese en el directorio principal del repositorio y ejecute el comando:
 
   * Extensibilidad: Para cambiar la API de la cual se obtiene la informacion de las peliculas, solo se debe modificar la url donde se optiene la información, lo cual lo puede realizar en la clase HttpConnection.
 
-  * Clases: HttpConnection realiza el enlace entre la API de peliculas y el socket creado por HttpServer. La clase Seeker unicamente guarda la informacion de peliculas que ya se buscarón anteriormente para que no se busque de nuevo. Por último, en HttpServer tenemos el servidor el cual es el metodo principal que inicia la conexión del socket en espera de solicitudes de información de peliculas, esta a su vez crea la tabla respectiva del JSON que contiene la información de la pelicula buscada.
+  * Modular: HttpConnection realiza el enlace entre la API de peliculas y el socket creado por HttpServer. La clase Seeker unicamente guarda la informacion de peliculas que ya se buscarón anteriormente para que no se busque de nuevo. Por último, en HttpServer tenemos el servidor el cual es el metodo principal que inicia la conexión del socket en espera de solicitudes de información de peliculas, esta a su vez crea la tabla respectiva del JSON que contiene la información de la pelicula buscada.
 
   * Patrones: Hacemos uso del patron de diseño Fachada, puesto que la clase Seeker recibe toda la consulta inicialmente y antes de preguntarle a la API revisa si ya se encuentra información guardada en el buscador.
-
-
-  * Patrones: Hacemos uso del patron de diseño Fachada, puesto que la clase Seeker recibe toda la consulta inicialmente y antes de preguntarle a la API revisa si ya se encuentra información guardada en el cache.
-
-
 
 
